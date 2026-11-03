@@ -1,26 +1,257 @@
 @import "tailwindcss";
 
+/* Le thème sombre est piloté par l'attribut data-theme posé sur <html> (voir ThemeScript). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---------------------------------------------------------------------------
+ * Jetons de design
+ * ------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --bg: #fafaf8;
+  --fg: #111827;
+  --surface: #ffffff;
+  --surface-muted: #f1f0ec;
+  --muted: #4b5563;
+  --border: #e5e3dd;
+  --ring: #111827;
+  --shadow-color: 17 24 39;
+
+  /* Accents par catégorie */
+  --accent-dev: #4f46e5;
+  --accent-dev-text: #4338ca;
+  --accent-dev-soft: #eef2ff;
+  --accent-architecture: #c2410c;
+  --accent-architecture-text: #b33c0b;
+  --accent-architecture-soft: #fff4ed;
+
+  /* Accent courant (neutre par défaut, surchargé par .accent-dev / .accent-architecture) */
+  --accent: #111827;
+  --accent-text: #111827;
+  --accent-soft: #f1f0ec;
+  --accent-contrast: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --fg: #e5e7eb;
+  --surface: #171a21;
+  --surface-muted: #1d212a;
+  --muted: #a1a7b3;
+  --border: #2a2f3a;
+  --ring: #e5e7eb;
+  --shadow-color: 0 0 0;
+
+  /* Variantes plus claires pour garder un contraste AA sur fond sombre */
+  --accent-dev-text: #a5b4fc;
+  --accent-dev-soft: #1e1b4b;
+  --accent-architecture-text: #fdba74;
+  --accent-architecture-soft: #2c1608;
+
+  --accent: #e5e7eb;
+  --accent-text: #e5e7eb;
+  --accent-soft: #1d212a;
+  --accent-contrast: #0f1115;
 }
 
+/* Sans JavaScript : suivre la préférence système */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg: #0f1115;
+    --fg: #e5e7eb;
+    --surface: #171a21;
+    --surface-muted: #1d212a;
+    --muted: #a1a7b3;
+    --border: #2a2f3a;
+    --ring: #e5e7eb;
+    --shadow-color: 0 0 0;
+    --accent-dev-text: #a5b4fc;
+    --accent-dev-soft: #1e1b4b;
+    --accent-architecture-text: #fdba74;
+    --accent-architecture-soft: #2c1608;
+    --accent: #e5e7eb;
+    --accent-text: #e5e7eb;
+    --accent-soft: #1d212a;
+    --accent-contrast: #0f1115;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.accent-dev {
+  --accent: var(--accent-dev);
+  --accent-text: var(--accent-dev-text);
+  --accent-soft: var(--accent-dev-soft);
+  --accent-contrast: #ffffff;
+}
+
+.accent-architecture {
+  --accent: var(--accent-architecture);
+  --accent-text: var(--accent-architecture-text);
+  --accent-soft: var(--accent-architecture-soft);
+  --accent-contrast: #ffffff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-dev: var(--accent-dev);
+  --color-dev-text: var(--accent-dev-text);
+  --color-dev-soft: var(--accent-dev-soft);
+  --color-architecture: var(--accent-architecture);
+  --color-architecture-text: var(--accent-architecture-text);
+  --color-architecture-soft: var(--accent-architecture-soft);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  /* Échelle typographique fluide */
+  --text-display: clamp(2.5rem, 1.6rem + 4vw, 4.75rem);
+  --text-display--line-height: 1.05;
+  --text-h1: clamp(2.125rem, 1.6rem + 2.4vw, 3.5rem);
+  --text-h1--line-height: 1.1;
+  --text-h2: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-h3--line-height: 1.3;
+  --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --text-lead--line-height: 1.6;
+
+  --shadow-soft:
+    0 1px 2px rgb(var(--shadow-color) / 0.04), 0 4px 16px rgb(var(--shadow-color) / 0.06);
+  --shadow-lift:
+    0 2px 4px rgb(var(--shadow-color) / 0.06), 0 12px 32px rgb(var(--shadow-color) / 0.1);
+}
+
+/* ---------------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--fg);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Contenu MDX
+ * ------------------------------------------------------------------------- */
+@layer components {
+  .prose-duo {
+    max-width: 68ch;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .prose-duo > * + * {
+    margin-top: 1.1em;
+  }
+  .prose-duo h2 {
+    margin-top: 2em;
+    font-size: var(--text-h3);
+    line-height: 1.3;
+  }
+  .prose-duo h3 {
+    margin-top: 1.6em;
+    font-size: 1.15rem;
+  }
+  .prose-duo a {
+    color: var(--accent-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-duo ul {
+    list-style: disc;
+    padding-left: 1.25em;
+  }
+  .prose-duo ol {
+    list-style: decimal;
+    padding-left: 1.25em;
+  }
+  .prose-duo li + li {
+    margin-top: 0.35em;
+  }
+  .prose-duo strong {
+    font-weight: 600;
+  }
+  .prose-duo blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1em;
+    color: var(--muted);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Animations (désactivées si l'utilisateur préfère réduire les mouvements)
+ * ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
