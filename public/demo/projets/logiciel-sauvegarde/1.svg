@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Logiciel de sauvegarde de fichiers">
+<defs>
+<linearGradient id="bg" gradientTransform="rotate(48 .5 .5)">
+<stop offset="0" stop-color="#1e1b4b"/><stop offset=".45" stop-color="#3730a3"/><stop offset=".8" stop-color="#4f46e5"/><stop offset="1" stop-color="#818cf8"/>
+</linearGradient>
+<radialGradient id="glow" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#glow)"/>
+<pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#e0e7ff" opacity="0.12"/></pattern><rect width="1600" height="1000" fill="url(#g)"/>
+<rect x="840" y="180" width="660" height="620" rx="24" fill="#000" opacity="0.25"/><circle cx="880" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="908" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="936" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><rect x="880" y="260" width="322.81236307229847" height="14" rx="7" fill="#e0e7ff" opacity="0.6353168022586033"/><rect x="880" y="296" width="280.7690153643489" height="14" rx="7" fill="#e0e7ff" opacity="0.6308914827066474"/><rect x="880" y="332" width="142.96611212659627" height="14" rx="7" fill="#e0e7ff" opacity="0.44889054424129426"/><rect x="960" y="368" width="363.8370931055397" height="14" rx="7" fill="#e0e7ff" opacity="0.27632080629700795"/><rect x="960" y="404" width="210.54777062963694" height="14" rx="7" fill="#e0e7ff" opacity="0.4225784801179543"/><rect x="960" y="440" width="357.43706280365586" height="14" rx="7" fill="#e0e7ff" opacity="0.5536819550557994"/><rect x="880" y="476" width="361.97884200606495" height="14" rx="7" fill="#e0e7ff" opacity="0.5603351918049158"/><rect x="880" y="512" width="231.75763932056725" height="14" rx="7" fill="#e0e7ff" opacity="0.5770115590770729"/><rect x="880" y="548" width="404.54257456120104" height="14" rx="7" fill="#e0e7ff" opacity="0.3974501978373155"/><rect x="960" y="584" width="459.2669192701578" height="14" rx="7" fill="#e0e7ff" opacity="0.34434579879743976"/><rect x="920" y="620" width="294.4298828067258" height="14" rx="7" fill="#e0e7ff" opacity="0.6247761447448283"/><rect x="960" y="656" width="138.61325229518116" height="14" rx="7" fill="#e0e7ff" opacity="0.39064084185520187"/><rect x="880" y="692" width="231.69963646214455" height="14" rx="7" fill="#e0e7ff" opacity="0.5939422584371641"/><rect x="920" y="728" width="219.54814603552222" height="14" rx="7" fill="#e0e7ff" opacity="0.32976264640456066"/>
+<text x="100" y="150" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#e0e7ff" opacity="0.85">DEV &amp; DATA · VISUEL D'EXEMPLE</text>
+<text x="100" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">Logiciel de</text>
+<text x="100" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">sauvegarde de</text>
+<text x="100" y="598" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">fichiers</text>
+<text x="100" y="712" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">Liste des travaux de sauvegarde et</text>
+<text x="100" y="754" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">leur état</text>
+</svg>

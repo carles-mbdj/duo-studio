@@ -1,0 +1,30 @@
+{
+  "category": "dev",
+  "intro": "J'aime transformer des données brutes en décisions claires, et des idées en outils qui fonctionnent. Mon cursus en sciences du numérique me fait passer du développement web à l'apprentissage automatique, avec un objectif : devenir data scientist.",
+  "skills": [
+    { "group": "Langages", "items": ["Python", "C#", "TypeScript", "SQL"] },
+    { "group": "Web", "items": ["React", "Next.js"] },
+    { "group": "Data", "items": ["pandas", "scikit-learn", "Power BI"] },
+    { "group": "Outils", "items": ["Git", "Docker"] }
+  ],
+  "timeline": [
+    {
+      "period": "2025 — aujourd'hui",
+      "title": "Cycle ingénieur en sciences du numérique",
+      "place": "École d'ingénieurs (exemple)",
+      "description": "Génie logiciel, bases de données, statistiques et apprentissage automatique."
+    },
+    {
+      "period": "2026 · 3 mois",
+      "title": "Stage développeur data",
+      "place": "Entreprise d'exemple",
+      "description": "Automatisation de rapports et création de tableaux de bord pour les équipes commerciales."
+    },
+    {
+      "period": "2025 — 2026",
+      "title": "Projets d'école",
+      "place": "En équipe",
+      "description": "Logiciel de sauvegarde en C# (architecture MVVM), application web et projets de data science."
+    }
+  ]
+}

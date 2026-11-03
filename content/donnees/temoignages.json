@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Sophie",
+    "role": "Gérante d'une boutique (exemple)",
+    "quote": "Un site clair, livré dans les temps, et des explications simples pour que je puisse le modifier moi-même.",
+    "category": "dev",
+    "exemple": true
+  },
+  {
+    "firstName": "Karim",
+    "role": "Particulier, projet d'extension (exemple)",
+    "quote": "Les rendus 3D nous ont permis de choisir entre deux agencements en une soirée. Nous savions enfin à quoi nous attendre.",
+    "category": "architecture",
+    "exemple": true
+  },
+  {
+    "firstName": "Claire",
+    "role": "Responsable d'association (exemple)",
+    "quote": "Le tableau de bord a remplacé trois fichiers Excel. Nos réunions de bureau sont devenues beaucoup plus efficaces.",
+    "category": "dev",
+    "exemple": true
+  }
+]

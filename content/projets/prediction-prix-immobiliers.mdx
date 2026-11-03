@@ -1,0 +1,40 @@
+---
+title: Prédiction de prix immobiliers
+slug: prediction-prix-immobiliers
+category: dev
+summary: Un modèle d'apprentissage automatique qui estime le prix d'un logement à partir de ses caractéristiques, avec une évaluation rigoureuse.
+year: 2026
+role: Data science — de la donnée brute au modèle
+tags: [Python, scikit-learn, pandas, Data]
+cover: /demo/projets/prediction-prix-immobiliers/cover.svg
+gallery:
+  - src: /demo/projets/prediction-prix-immobiliers/1.svg
+    alt: Nuage de points comparant prix prédits et prix réels
+    caption: Prix prédits comparés aux prix réels sur le jeu de test
+  - src: /demo/projets/prediction-prix-immobiliers/2.svg
+    alt: Comparaison des performances de plusieurs modèles
+    caption: Comparaison de modèles par validation croisée
+  - src: /demo/projets/prediction-prix-immobiliers/3.svg
+    alt: Importance des variables du modèle retenu
+    caption: Variables les plus influentes du modèle final
+link:
+  label: Voir le notebook (exemple)
+  url: https://github.com/
+featured: false
+---
+
+## Contexte
+
+Ce projet personnel part d'une question simple : à partir d'informations publiques (surface, nombre de pièces, localisation, année de construction), peut-on estimer de façon fiable le prix d'un logement ? C'était l'occasion de mener un projet de data science de bout en bout.
+
+## Démarche
+
+La phase la plus longue a été la préparation des données : valeurs manquantes, surfaces aberrantes, regroupement des quartiers trop rares. Chaque choix a été documenté dans le notebook pour rester reproductible.
+
+Plusieurs modèles **scikit-learn** ont ensuite été comparés par validation croisée : régression linéaire régularisée, forêt aléatoire et gradient boosting. Le jeu de test n'a été utilisé qu'une seule fois, à la toute fin, pour éviter de surestimer les performances.
+
+Au-delà du score, l'analyse des erreurs a montré que le modèle se trompait surtout sur les biens atypiques (très grandes surfaces, biens d'exception) — une limite assumée et expliquée.
+
+## Résultat
+
+Le modèle retenu (gradient boosting) réduit nettement l'erreur moyenne par rapport à une simple régression. Le projet est surtout un bon exemple de méthode : nettoyage, comparaison honnête des modèles et explication des résultats.

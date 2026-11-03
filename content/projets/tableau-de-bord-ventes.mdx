@@ -1,0 +1,40 @@
+---
+title: Tableau de bord de ventes
+slug: tableau-de-bord-ventes
+category: dev
+summary: Un tableau de bord interactif pour suivre le chiffre d'affaires, les marges et les tendances par période et par région.
+year: 2026
+role: Analyse de données et développement
+tags: [Python, pandas, Plotly, Data]
+cover: /demo/projets/tableau-de-bord-ventes/cover.svg
+gallery:
+  - src: /demo/projets/tableau-de-bord-ventes/1.svg
+    alt: Vue d'ensemble du tableau de bord avec les indicateurs clés
+    caption: Vue d'ensemble — chiffre d'affaires, panier moyen et marge
+  - src: /demo/projets/tableau-de-bord-ventes/2.svg
+    alt: Graphique d'évolution des ventes par mois
+    caption: Évolution mensuelle et comparaison avec l'année précédente
+  - src: /demo/projets/tableau-de-bord-ventes/3.svg
+    alt: Répartition des ventes par région
+    caption: Répartition régionale et filtres combinés
+link:
+  label: Voir le dépôt (exemple)
+  url: https://github.com/
+featured: true
+---
+
+## Contexte
+
+Une petite entreprise de distribution suivait ses ventes dans une série de fichiers Excel envoyés chaque semaine par les commerciaux. Consolider ces fichiers prenait près d'une journée par mois et les erreurs de copie étaient fréquentes. L'objectif : un outil unique, à jour, lisible en quelques secondes par la direction.
+
+## Démarche
+
+Le premier travail a porté sur les données elles-mêmes : harmonisation des noms de produits et de régions, suppression des doublons, gestion des dates mal formatées. Un script **pandas** centralise désormais ce nettoyage et produit une table unique, vérifiée par une série de contrôles automatiques (totaux, valeurs manquantes, cohérence des dates).
+
+Les indicateurs ont ensuite été définis avec les utilisateurs : chiffre d'affaires, panier moyen, marge, évolution sur un an glissant. Chaque graphique a été pensé pour répondre à une question précise plutôt que pour « tout montrer ».
+
+L'interface, construite avec **Plotly**, propose des filtres par période et par région qui se combinent. Les graphiques se mettent à jour instantanément et peuvent être exportés pour les réunions.
+
+## Résultat
+
+La consolidation mensuelle est passée d'une journée à quelques minutes. Le tableau de bord est devenu le support des points hebdomadaires, et deux anomalies de facturation ont été repérées dès les premières semaines grâce à la vue régionale.

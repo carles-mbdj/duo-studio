@@ -1,0 +1,30 @@
+{
+  "category": "architecture",
+  "intro": "Je dessine des espaces à vivre en partant de ceux qui les habitent. Ma formation en génie civil me donne une compréhension concrète de la structure et de la construction ; je me destine à l'architecture.",
+  "skills": [
+    { "group": "Conception", "items": ["AutoCAD", "Revit", "SketchUp"] },
+    { "group": "Rendu", "items": ["Lumion", "Photoshop"] },
+    { "group": "Pratique", "items": ["Dessin à la main", "Relevé sur place"] },
+    { "group": "Technique", "items": ["Notions de structure", "Béton armé"] }
+  ],
+  "timeline": [
+    {
+      "period": "2025 — aujourd'hui",
+      "title": "Cycle ingénieur en génie civil",
+      "place": "École d'ingénieurs (exemple)",
+      "description": "Structures, matériaux, béton armé et conception de bâtiments."
+    },
+    {
+      "period": "2026 · 2 mois",
+      "title": "Stage en bureau d'études",
+      "place": "Entreprise d'exemple",
+      "description": "Mise au propre de plans, modélisation et préparation de dossiers graphiques."
+    },
+    {
+      "period": "2025 — 2026",
+      "title": "Projets d'école",
+      "place": "En atelier",
+      "description": "Bibliothèque de quartier, logements et études de structure."
+    }
+  ]
+}

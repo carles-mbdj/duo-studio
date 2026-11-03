@@ -1,0 +1,37 @@
+---
+title: Application mobile de lecture de BD
+slug: application-lecture-bd
+category: dev
+summary: Une application mobile pour découvrir, acheter et lire des bandes dessinées, avec un lecteur vertical pensé pour le pouce.
+year: 2026
+role: Développement mobile (front et paiement)
+tags: [React Native, TypeScript, Stripe, Mobile]
+cover: /demo/projets/application-lecture-bd/cover.svg
+gallery:
+  - src: /demo/projets/application-lecture-bd/1.svg
+    alt: Écran du catalogue de bandes dessinées
+    caption: Catalogue avec recherche et filtres par genre
+  - src: /demo/projets/application-lecture-bd/2.svg
+    alt: Lecteur vertical d'une planche de bande dessinée
+    caption: Lecteur vertical avec préchargement des pages
+  - src: /demo/projets/application-lecture-bd/3.svg
+    alt: Écran de paiement intégré
+    caption: Paiement intégré en deux étapes
+featured: true
+---
+
+## Contexte
+
+Un collectif d'auteurs indépendants souhaitait vendre ses albums directement, sans passer par une grande plateforme. Il lui fallait une application simple : un catalogue, un lecteur agréable sur téléphone et un paiement fiable.
+
+## Démarche
+
+L'application a été développée en **React Native** avec TypeScript, ce qui permet de publier une seule base de code sur Android et iOS. Le catalogue charge les couvertures progressivement et met en cache les albums déjà consultés.
+
+Le lecteur a demandé le plus de soin. Plutôt qu'un défilement page par page, il propose une lecture verticale continue, plus naturelle sur un écran de téléphone. Les pages suivantes sont préchargées en arrière-plan pour éviter toute attente.
+
+Le paiement repose sur **Stripe**. Aucune donnée bancaire ne transite par nos serveurs : l'application reçoit seulement la confirmation de l'achat, puis débloque l'album dans la bibliothèque de l'utilisateur.
+
+## Résultat
+
+Le prototype a été testé par une vingtaine de lecteurs. Les retours ont surtout porté sur la fluidité du lecteur, jugée meilleure que celle des applications qu'ils utilisaient déjà. La prochaine étape prévue est un mode hors ligne.

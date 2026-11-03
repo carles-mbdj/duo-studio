@@ -1,0 +1,32 @@
+[
+  {
+    "id": "delais",
+    "question": "Quels sont vos délais ?",
+    "answer": "Ils dépendent du projet : comptez 2 à 3 semaines pour un site vitrine et 1 à 3 semaines pour des plans de maison. Le délai exact est indiqué dans le devis et nous vous prévenons dès qu'un imprévu le modifie. (Exemple — à adapter.)"
+  },
+  {
+    "id": "paiement",
+    "question": "Comment se passe le paiement ?",
+    "answer": "Un acompte de 30 % est demandé à la validation du devis. Le solde est réglé à la livraison. Pour la maintenance, la facturation est mensuelle et sans engagement."
+  },
+  {
+    "id": "modifications",
+    "question": "Les modifications sont-elles incluses ?",
+    "answer": "Oui. Chaque offre comprend une ou deux séries d'ajustements, précisées dans le devis. Au-delà, ou si le projet change en profondeur, nous vous proposons un complément chiffré avant de commencer."
+  },
+  {
+    "id": "fichiers",
+    "question": "À qui appartiennent les fichiers livrés ?",
+    "answer": "Une fois le projet réglé, vous recevez les fichiers sources (code, fichiers DWG, modèles 3D) et pouvez les utiliser librement. Nous gardons seulement le droit de montrer le projet dans notre portfolio, sauf si vous préférez qu'il reste confidentiel."
+  },
+  {
+    "id": "zone",
+    "question": "Où intervenez-vous ?",
+    "answer": "Les prestations numériques se font entièrement à distance, partout en France. Les relevés sur place sont réalisés autour d'Orléans (exemple) ; pour une autre zone, contactez-nous."
+  },
+  {
+    "id": "hors-perimetre",
+    "question": "Qu'est-ce qui n'est pas inclus ?",
+    "answer": "Nous ne déposons pas de permis de construire soumis à l'intervention obligatoire d'un architecte, nous ne réalisons pas d'études de structure réglementaires et nous ne gérons pas de chantier. Côté numérique, l'hébergement et le nom de domaine restent à votre nom et à votre charge."
+  }
+]

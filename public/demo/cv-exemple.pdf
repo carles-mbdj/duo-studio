@@ -1,0 +1,46 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 641 >>
+stream
+BT /F2 26 Tf 72 780 Td (CV d'exemple - Duo Studio) Tj ET
+BT /F1 12 Tf 72 742 Td () Tj ET
+BT /F1 12 Tf 72 718 Td (Ce document est un fichier de demonstration.) Tj ET
+BT /F1 12 Tf 72 694 Td (Remplacez public/demo/cv-exemple.pdf par votre vrai CV,) Tj ET
+BT /F1 12 Tf 72 670 Td (ou modifiez le chemin dans src/config/site.ts \(people.*.cv\).) Tj ET
+BT /F1 12 Tf 72 646 Td () Tj ET
+BT /F2 14 Tf 72 622 Td (Formation \(exemple\)) Tj ET
+BT /F1 12 Tf 72 596 Td (Cycle ingenieur - ecole d'exemple) Tj ET
+BT /F1 12 Tf 72 572 Td () Tj ET
+BT /F2 14 Tf 72 548 Td (Experience \(exemple\)) Tj ET
+BT /F1 12 Tf 72 522 Td (Stage - entreprise d'exemple) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1088
+%%EOF

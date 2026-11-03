@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Application mobile de lecture de BD">
+<defs>
+<linearGradient id="bg" gradientTransform="rotate(44 .5 .5)">
+<stop offset="0" stop-color="#1e1b4b"/><stop offset=".45" stop-color="#3730a3"/><stop offset=".8" stop-color="#4f46e5"/><stop offset="1" stop-color="#818cf8"/>
+</linearGradient>
+<radialGradient id="glow" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#glow)"/>
+<pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#e0e7ff" opacity="0.12"/></pattern><rect width="1600" height="1000" fill="url(#g)"/>
+<rect x="840" y="180" width="660" height="620" rx="24" fill="#000" opacity="0.25"/><circle cx="880" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="908" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="936" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><rect x="920" y="260" width="388.588385223411" height="14" rx="7" fill="#e0e7ff" opacity="0.2558226442662999"/><rect x="880" y="296" width="146.06478054076433" height="14" rx="7" fill="#e0e7ff" opacity="0.46350507921306416"/><rect x="880" y="332" width="271.4058890985325" height="14" rx="7" fill="#e0e7ff" opacity="0.3162255309056491"/><rect x="880" y="368" width="319.2681053932756" height="14" rx="7" fill="#e0e7ff" opacity="0.41625524644041434"/><rect x="920" y="404" width="184.86415966879576" height="14" rx="7" fill="#e0e7ff" opacity="0.30010622313711793"/><rect x="960" y="440" width="226.94610269740224" height="14" rx="7" fill="#e0e7ff" opacity="0.2818675791262649"/><rect x="880" y="476" width="289.72670322749764" height="14" rx="7" fill="#e0e7ff" opacity="0.5453787869773805"/><rect x="920" y="512" width="219.27325849421322" height="14" rx="7" fill="#e0e7ff" opacity="0.43937113519059495"/><rect x="920" y="548" width="382.23089253064245" height="14" rx="7" fill="#e0e7ff" opacity="0.6455697213998064"/><rect x="880" y="584" width="382.940806299448" height="14" rx="7" fill="#e0e7ff" opacity="0.4195321022416465"/><rect x="920" y="620" width="296.54550921637565" height="14" rx="7" fill="#e0e7ff" opacity="0.3508711008820683"/><rect x="880" y="656" width="376.1391413491219" height="14" rx="7" fill="#e0e7ff" opacity="0.5765669590444304"/><rect x="960" y="692" width="439.63093515019864" height="14" rx="7" fill="#e0e7ff" opacity="0.28284499358851467"/><rect x="920" y="728" width="262.3161747865379" height="14" rx="7" fill="#e0e7ff" opacity="0.2411613315693103"/>
+<text x="100" y="150" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#e0e7ff" opacity="0.85">DEV &amp; DATA · VISUEL D'EXEMPLE</text>
+<text x="100" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">Application mobile</text>
+<text x="100" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">de lecture de BD</text>
+<text x="100" y="628" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">Catalogue avec recherche et filtres</text>
+<text x="100" y="670" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">par genre</text>
+</svg>

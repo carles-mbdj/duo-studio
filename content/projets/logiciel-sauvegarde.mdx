@@ -1,0 +1,37 @@
+---
+title: Logiciel de sauvegarde de fichiers
+slug: logiciel-sauvegarde
+category: dev
+summary: Un logiciel de bureau qui planifie des sauvegardes complètes ou différentielles et consigne chaque opération dans un journal.
+year: 2026
+role: Projet d'école — conception et développement en équipe
+tags: [C#, .NET, MVVM, Projet d'école]
+cover: /demo/projets/logiciel-sauvegarde/cover.svg
+gallery:
+  - src: /demo/projets/logiciel-sauvegarde/1.svg
+    alt: Fenêtre principale listant les travaux de sauvegarde
+    caption: Liste des travaux de sauvegarde et leur état
+  - src: /demo/projets/logiciel-sauvegarde/2.svg
+    alt: Extrait du code de la couche ViewModel
+    caption: Architecture MVVM — séparation de la vue et de la logique
+  - src: /demo/projets/logiciel-sauvegarde/3.svg
+    alt: Journal des événements au format JSON
+    caption: Journal d'événements consultable et exportable
+featured: false
+---
+
+## Contexte
+
+Ce projet a été réalisé en équipe de quatre dans le cadre du cycle ingénieur. Le sujet simulait la demande d'un éditeur de logiciels : proposer un outil de sauvegarde fiable, configurable et capable d'évoluer d'une version console vers une interface graphique.
+
+## Démarche
+
+Le logiciel est écrit en **C#** sur **.NET**. Nous avons adopté l'architecture **MVVM** dès le départ, ce qui a permis de passer de la version console à l'interface graphique sans réécrire la logique métier.
+
+Chaque travail de sauvegarde peut être complet ou différentiel. Les copies s'exécutent en parallèle, avec une priorité donnée aux fichiers jugés importants. Un journal enregistre chaque opération (fichier, taille, durée, éventuelles erreurs) au format JSON ou XML.
+
+Le travail en équipe s'est organisé autour de Git, avec des revues de code systématiques et des tests unitaires sur les composants critiques.
+
+## Résultat
+
+Le projet a été présenté lors d'une soutenance devant un jury jouant le rôle du client. Il nous a surtout appris à concevoir une architecture qui accepte le changement, et à documenter nos choix pour les autres membres de l'équipe.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Prédiction de prix immobiliers">
+<defs>
+<linearGradient id="bg" gradientTransform="rotate(38 .5 .5)">
+<stop offset="0" stop-color="#1e1b4b"/><stop offset=".45" stop-color="#3730a3"/><stop offset=".8" stop-color="#4f46e5"/><stop offset="1" stop-color="#818cf8"/>
+</linearGradient>
+<radialGradient id="glow" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#glow)"/>
+<pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#e0e7ff" opacity="0.12"/></pattern><rect width="1600" height="1000" fill="url(#g)"/>
+<rect x="840" y="180" width="660" height="620" rx="24" fill="#000" opacity="0.25"/><circle cx="880" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="908" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><circle cx="936" cy="216" r="8" fill="#e0e7ff" opacity="0.5"/><rect x="880" y="260" width="432.817017599009" height="14" rx="7" fill="#e0e7ff" opacity="0.4468145456863567"/><rect x="960" y="296" width="141.22969072312117" height="14" rx="7" fill="#e0e7ff" opacity="0.4795479597407393"/><rect x="960" y="332" width="410.8184715406969" height="14" rx="7" fill="#e0e7ff" opacity="0.24844698584638536"/><rect x="880" y="368" width="278.41780840419233" height="14" rx="7" fill="#e0e7ff" opacity="0.30958439573878427"/><rect x="920" y="404" width="268.0258271796629" height="14" rx="7" fill="#e0e7ff" opacity="0.478271184139885"/><rect x="880" y="440" width="415.21881932392716" height="14" rx="7" fill="#e0e7ff" opacity="0.524924181716051"/><rect x="920" y="476" width="342.0150679210201" height="14" rx="7" fill="#e0e7ff" opacity="0.6118748706765473"/><rect x="960" y="512" width="189.30770543403924" height="14" rx="7" fill="#e0e7ff" opacity="0.34380240357713776"/><rect x="920" y="548" width="320.36698845680803" height="14" rx="7" fill="#e0e7ff" opacity="0.30816435476299375"/><rect x="920" y="584" width="159.20572496950626" height="14" rx="7" fill="#e0e7ff" opacity="0.29214144170982764"/><rect x="920" y="620" width="377.28733484167606" height="14" rx="7" fill="#e0e7ff" opacity="0.20170795065350833"/><rect x="920" y="656" width="125.7398774754256" height="14" rx="7" fill="#e0e7ff" opacity="0.5306413297192194"/><rect x="920" y="692" width="274.7975622443482" height="14" rx="7" fill="#e0e7ff" opacity="0.5342677883105353"/><rect x="920" y="728" width="315.30565252527595" height="14" rx="7" fill="#e0e7ff" opacity="0.49320510461693634"/>
+<text x="100" y="150" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#e0e7ff" opacity="0.85">DEV &amp; DATA · VISUEL D'EXEMPLE</text>
+<text x="100" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">Prédiction de prix</text>
+<text x="100" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#ffffff">immobiliers</text>
+<text x="100" y="628" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">Prix prédits comparés aux prix réels</text>
+<text x="100" y="670" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#e0e7ff" opacity="0.9">sur le jeu de test</text>
+</svg>

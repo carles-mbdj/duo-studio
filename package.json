@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "demo:assets": "node scripts/generate-demo-assets.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -41,7 +42,6 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.1.0"
   },
   "engines": {
