@@ -21,7 +21,10 @@ export function ProfilePage({ category }: { category: Category }) {
   return (
     <div className={`accent-${category}`}>
       {/* Présentation */}
-      <section aria-labelledby="profil-titre" className="pt-12 pb-16 sm:pt-20 sm:pb-24">
+      <section
+        aria-labelledby="profil-titre"
+        className="overflow-x-clip pt-12 pb-16 sm:pt-20 sm:pb-24"
+      >
         <Container className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr] lg:gap-16">
           <div>
             <Badge tone="accent">{meta.label}</Badge>

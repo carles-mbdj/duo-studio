@@ -34,8 +34,11 @@ export function LightboxGallery({
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const [index, setIndex] = useState<number | null>(null);
+  // Vignette qui a ouvert la visionneuse : le focus y revient à la fermeture.
+  const openerRef = useRef<number | null>(null);
 
   const open = (i: number) => {
+    openerRef.current = i;
     setIndex(i);
     dialogRef.current?.showModal();
   };
@@ -57,10 +60,13 @@ export function LightboxGallery({
     const dialog = dialogRef.current;
     if (!dialog) return;
     const onClose = () => {
-      setIndex((current) => {
-        if (current !== null) triggerRefs.current[current]?.focus();
-        return null;
-      });
+      setIndex(null);
+      const opener = openerRef.current;
+      openerRef.current = null;
+      if (opener !== null) {
+        // Après le rendu (le contenu de la visionneuse est démonté).
+        requestAnimationFrame(() => triggerRefs.current[opener]?.focus());
+      }
     };
     dialog.addEventListener("close", onClose);
     return () => dialog.removeEventListener("close", onClose);

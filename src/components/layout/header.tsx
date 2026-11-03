@@ -41,7 +41,13 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-bg/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40">
+      {/* Fond flouté sur un calque à part : un backdrop-filter sur <header> deviendrait le bloc
+          conteneur du menu mobile (position: fixed) et l'écraserait à la hauteur de l'en-tête. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 border-b border-border/70 bg-bg/85 backdrop-blur-md"
+      />
       <Container size="wide" className="flex h-16 items-center justify-between gap-6">
         <Logo />
 

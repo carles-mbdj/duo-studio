@@ -62,5 +62,12 @@ export function createRateLimiter({
   };
 }
 
-/** Limiteur du formulaire de contact : 5 envois par heure et par adresse IP. */
-export const contactRateLimiter = createRateLimiter({ limit: 5, windowMs: 60 * 60 * 1000 });
+/**
+ * Limiteur du formulaire de contact : 5 envois par heure et par adresse IP.
+ * CONTACT_RATE_LIMIT permet d'ajuster la limite (les tests de bout en bout la relèvent).
+ */
+const configuredLimit = Number(process.env.CONTACT_RATE_LIMIT);
+export const contactRateLimiter = createRateLimiter({
+  limit: Number.isInteger(configuredLimit) && configuredLimit > 0 ? configuredLimit : 5,
+  windowMs: 60 * 60 * 1000,
+});
