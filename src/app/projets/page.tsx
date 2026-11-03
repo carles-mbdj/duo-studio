@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
 import { ProjectGrid } from "@/components/projets/project-card";
 import { ProjectsExplorer } from "@/components/projets/projects-explorer";
@@ -6,12 +6,12 @@ import { Section } from "@/components/ui/section";
 import { getProjects } from "@/lib/content";
 import { toProjectSummary } from "@/lib/content-types";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Projets",
   description:
     "Tous les projets de Duo Studio : développement, data, plans de maison, rénovation et modélisation 3D.",
-  alternates: { canonical: "/projets" },
-};
+  path: "/projets",
+});
 
 export default function ProjectsPage() {
   const projects = getProjects().map(toProjectSummary);

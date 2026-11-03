@@ -1,4 +1,6 @@
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { creativeWorkJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,11 +26,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  return {
+  return pageMetadata({
     title: project.title,
     description: project.summary,
-    alternates: { canonical: `/projets/${project.slug}` },
-  };
+    path: `/projets/${project.slug}`,
+    type: "article",
+  });
 }
 
 export default async function ProjectPage({ params }: PageProps<"/projets/[slug]">) {
@@ -41,6 +44,7 @@ export default async function ProjectPage({ params }: PageProps<"/projets/[slug]
 
   return (
     <article className={`accent-${project.category}`}>
+      <JsonLd data={creativeWorkJsonLd(project)} />
       <header className="pt-10 pb-12 sm:pt-16">
         <Container>
           <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-muted">

@@ -1,7 +1,9 @@
 import { ArrowRight, Code2, Ruler } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ProjectGrid } from "@/components/projets/project-card";
 import { ServiceLink } from "@/components/services/service-card";
+import { JsonLd } from "@/components/json-ld";
 import { Testimonials } from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -10,6 +12,7 @@ import { Section } from "@/components/ui/section";
 import { siteConfig, type Category } from "@/config/site";
 import { getRecentProjects, getServices, getTestimonials } from "@/lib/content";
 import { toProjectSummary } from "@/lib/content-types";
+import { professionalServiceJsonLd } from "@/lib/seo";
 
 const panels: Array<{
   category: Category;
@@ -31,6 +34,8 @@ const panels: Array<{
   },
 ];
 
+export const metadata: Metadata = { alternates: { canonical: "/" } };
+
 export default function HomePage() {
   const recent = getRecentProjects(3).map(toProjectSummary);
   const services = {
@@ -40,6 +45,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={professionalServiceJsonLd()} />
       {/* Hero */}
       <section aria-labelledby="hero-titre" className="pt-16 pb-12 sm:pt-24 sm:pb-16">
         <Container>

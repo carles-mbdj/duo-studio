@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx/mdx-content";
 import { Container } from "@/components/ui/container";
@@ -7,11 +8,7 @@ import { getPage } from "@/lib/content";
 export function editorialMetadata(slug: string): Metadata {
   const page = getPage(slug);
   if (!page) return {};
-  return {
-    title: page.title,
-    description: page.description,
-    alternates: { canonical: `/${slug}` },
-  };
+  return pageMetadata({ title: page.title, description: page.description, path: `/${slug}` });
 }
 
 /** Page éditoriale simple rendue depuis content/pages/<slug>.mdx. */

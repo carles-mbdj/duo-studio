@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ServiceLink } from "@/components/services/service-card";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -8,12 +8,12 @@ import { Section } from "@/components/ui/section";
 import { siteConfig } from "@/config/site";
 import { getFaq, getServices } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Services",
   description:
     "Sites web, applications, analyse de données, plans de maison, modélisation 3D et aménagement : nos offres et notre méthode.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 const steps = [
   {

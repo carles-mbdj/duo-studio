@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { SkipLink } from "@/components/layout/skip-link";
+import { Analytics } from "@/components/analytics";
 import { ThemeScript } from "@/components/layout/theme-script";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -17,7 +18,6 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  axes: ["opsz", "SOFT"],
 });
 
 export const metadata: Metadata = {
@@ -27,6 +27,17 @@ export const metadata: Metadata = {
     template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  applicationName: siteConfig.name,
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    url: "/",
+    title: `${siteConfig.name} — ${siteConfig.baseline}`,
+    description: siteConfig.description,
+  },
+  twitter: { card: "summary_large_image" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
@@ -53,6 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

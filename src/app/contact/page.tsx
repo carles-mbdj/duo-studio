@@ -1,5 +1,5 @@
 import { Clock, Mail, MapPin } from "lucide-react";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Container } from "@/components/ui/container";
@@ -7,12 +7,12 @@ import { siteConfig } from "@/config/site";
 import { getServices } from "@/lib/content";
 import { ContactFormFromUrl } from "./contact-form-from-url";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
     "Parlez-nous de votre projet : site web, application, data, plans de maison ou modélisation 3D. Réponse rapide, devis gratuit.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   const turnstileSiteKey = process.env.TURNSTILE_SITE_KEY || undefined;
