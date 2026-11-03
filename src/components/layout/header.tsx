@@ -69,9 +69,11 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <ThemeToggle />
-          <Button href="/contact" size="sm" className="ml-2 hidden sm:inline-flex">
-            Nous contacter
-          </Button>
+          <span className="ml-2 hidden sm:block">
+            <Button href="/contact" size="sm">
+              Nous contacter
+            </Button>
+          </span>
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-full hover:bg-surface-muted lg:hidden"

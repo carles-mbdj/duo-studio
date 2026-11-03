@@ -16,7 +16,7 @@ type LightboxGalleryProps = {
   /** Nom de la galerie, annoncé aux lecteurs d'écran. */
   label: string;
   /** Mise en page des vignettes. */
-  layout?: "grid" | "masonry";
+  layout?: "grid" | "large";
   className?: string;
 };
 
@@ -83,9 +83,9 @@ export function LightboxGallery({
       <ul
         aria-label={label}
         className={cn(
-          layout === "masonry"
-            ? "columns-1 gap-4 sm:columns-2 lg:columns-3 [&>li]:mb-4 [&>li]:break-inside-avoid"
-            : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+          "grid gap-x-4 gap-y-6 sm:grid-cols-2",
+          layout === "grid" && "lg:grid-cols-3",
+          layout === "large" && "lg:gap-x-6 lg:[&>li:nth-child(5n+1)]:col-span-2",
           className,
         )}
       >
@@ -106,11 +106,12 @@ export function LightboxGallery({
                   alt=""
                   width={1600}
                   height={1000}
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className={cn(
-                    "h-auto w-full transition-transform duration-500 motion-safe:group-hover:scale-[1.03]",
-                    layout === "masonry" && i % 3 === 1 && "aspect-[4/5] object-cover",
-                  )}
+                  sizes={
+                    layout === "large"
+                      ? "(min-width: 640px) 50vw, 100vw"
+                      : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  }
+                  className="h-auto w-full transition-transform duration-500 motion-safe:group-hover:scale-[1.03]"
                 />
               </button>
               {image.caption && (

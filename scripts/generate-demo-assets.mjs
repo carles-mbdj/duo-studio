@@ -206,7 +206,7 @@ function architectureMotif(variant, rand, ink) {
 function projectSvg({ title, subtitle, category, index, seed }) {
   const palette = palettes[category];
   const rand = seededRandom(seed);
-  const variant = index % 3;
+  const variant = (index + Math.floor(rand() * 3)) % 3;
   const angle = 20 + Math.round(rand() * 50);
   const [s0, s1, s2, s3] = palette.stops;
   const titleLines = wrap(title, 18);
