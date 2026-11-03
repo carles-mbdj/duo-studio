@@ -6,3 +6,6 @@ import { z } from "zod";
  * Ce module doit être importé avant toute création de schéma.
  */
 z.config({ jitless: true });
+
+// Messages d'erreur par défaut en français.
+z.config(z.locales.fr());

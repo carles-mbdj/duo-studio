@@ -16,8 +16,19 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+/**
+ * En-tête avec lien actif. `usePathname` peut suspendre le rendu (page d'un slug inconnu au
+ * build) : le layout l'enveloppe donc dans <Suspense> avec HeaderFallback (sans lien actif).
+ */
 export function Header() {
-  const pathname = usePathname();
+  return <HeaderView pathname={usePathname()} />;
+}
+
+export function HeaderFallback() {
+  return <HeaderView pathname="" />;
+}
+
+function HeaderView({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
   const [lastPath, setLastPath] = useState(pathname);
 

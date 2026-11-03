@@ -16,6 +16,10 @@ import { siteConfig } from "@/config/site";
 import { getProject, getProjects, getRelatedProjects } from "@/lib/content";
 import { toProjectSummary } from "@/lib/content-types";
 
+// Tous les projets connus sont prérendus (generateStaticParams). Un slug inconnu mène à une 404,
+// rendue à la demande : la navigation peut donc légitimement attendre le serveur.
+export const instant = false;
+
 export function generateStaticParams() {
   return getProjects().map((project) => ({ slug: project.slug }));
 }

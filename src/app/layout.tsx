@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Suspense } from "react";
 import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
+import { Header, HeaderFallback } from "@/components/layout/header";
 import { SkipLink } from "@/components/layout/skip-link";
 import { Analytics } from "@/components/analytics";
 import { ThemeScript } from "@/components/layout/theme-script";
@@ -59,7 +60,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="flex min-h-full flex-col">
         <SkipLink />
-        <Header />
+        <Suspense fallback={<HeaderFallback />}>
+          <Header />
+        </Suspense>
         <main id="contenu" tabIndex={-1} className="flex flex-1 flex-col outline-none">
           {children}
         </main>

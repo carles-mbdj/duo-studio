@@ -63,4 +63,12 @@ test.describe("Parcours principal : accueil → projet → contact", () => {
     await page.getByRole("link", { name: "Retour à l'accueil", exact: true }).click();
     await expect(page).toHaveURL(/\/$/);
   });
+
+  test("un projet inexistant renvoie aussi la page 404", async ({ page }) => {
+    const response = await page.goto("/projets/projet-inexistant");
+    expect(response?.status()).toBe(404);
+    await expect(page.getByRole("heading", { name: /Cette page n'existe pas/ })).toBeVisible();
+    // L'en-tête du site reste affiché sur la page 404.
+    await expect(page.getByRole("banner")).toBeVisible();
+  });
 });

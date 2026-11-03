@@ -52,6 +52,11 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   poweredByHeader: false,
+  // Le contenu (MDX/JSON) est lu à l'exécution par le proxy et les pages rendues à la demande :
+  // on l'inclut explicitement dans le paquet serveur déployé.
+  outputFileTracingIncludes: {
+    "/**": ["./content/**/*"],
+  },
   turbopack: {
     rules: {
       "*.css": {
